@@ -5,7 +5,7 @@
 <link rel="icon" type="image/png" href="/logo.png">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Mercadão das Baterias — Baterias em Patrocínio-MG | Plantão 24h</title>
-<meta name="description" content="Baterias Moura, Heliar e Cral para carro, moto e caminhão em Patrocínio-MG. Entrega e instalação grátis onde você estiver. Plantão 24 horas. Fale conosco agora.">
+<meta name="description" content="Baterias Moura, Cral e ACDelco para carro, moto e caminhão em Patrocínio-MG. Entrega e instalação grátis, plantão 24h e o melhor preço na base de troca.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Poppins:ital,wght@0,400;0,500;0,600;0,700;0,800;1,600&display=swap" rel="stylesheet">
@@ -172,6 +172,21 @@
   .float-zap:hover{transform:scale(1.1)}
   @keyframes pulseZap{0%{box-shadow:0 0 0 0 rgba(37,211,102,.5)}70%{box-shadow:0 0 0 20px rgba(37,211,102,0)}100%{box-shadow:0 0 0 0 rgba(37,211,102,0)}}
 
+  /* ==== BASE DE TROCA ==== */
+  .troca{background:linear-gradient(120deg,var(--preto),var(--preto-2));color:#fff;padding:30px 0}
+  .troca-in{display:flex;align-items:center;gap:22px;flex-wrap:wrap;justify-content:center;text-align:center}
+  .troca-ico{font-size:2.6rem}
+  .troca h3{font-family:'Oswald',sans-serif;font-weight:600;font-size:1.5rem;text-transform:uppercase;letter-spacing:1px}
+  .troca h3 .hl{color:var(--amarelo)}
+  .troca p{color:#cfcfcf;font-size:1rem;max-width:520px;margin-top:4px}
+  /* ==== PAGAMENTO ==== */
+  .pagamento{background:var(--cinza);padding:46px 0;text-align:center}
+  .pagamento h3{font-family:'Oswald',sans-serif;font-weight:600;text-transform:uppercase;letter-spacing:1.5px;color:var(--preto);font-size:1.35rem;margin-bottom:22px}
+  .cartoes{display:flex;justify-content:center;flex-wrap:wrap;gap:12px}
+  .card{background:#fff;border:1px solid #e6e6e6;border-radius:10px;padding:12px 22px;font-weight:800;color:var(--preto);box-shadow:0 4px 12px rgba(0,0,0,.06)}
+  .card.pix{color:#00a884}
+  .card.destaque{background:var(--amarelo);border-color:var(--amarelo)}
+
   /* ==== RESPONSIVO ==== */
   @media(max-width:860px){
     .nav-links{display:none;position:absolute;top:100%;left:0;right:0;background:var(--preto);flex-direction:column;padding:24px;gap:20px;box-shadow:0 12px 30px rgba(0,0,0,.4)}
@@ -209,7 +224,7 @@
   <div class="container hero-inner">
     <span class="badge"><span class="pulse-dot"></span> Plantão 24 horas · Patrocínio-MG</span>
     <h1>Bateria descarregada?<br><span class="hl">A gente resolve</span> na hora.</h1>
-    <p>Baterias Moura, Heliar e Cral para carro, moto e caminhão. Entrega e instalação <strong>grátis</strong> onde você estiver.</p>
+    <p>Baterias Moura, Cral e ACDelco para carro, moto e caminhão. Entrega e instalação <strong>grátis</strong> e o melhor preço na <strong>base de troca</strong>.</p>
     <div class="hero-cta">
       <a href="https://wa.me/5534999434485?text=Ol%C3%A1!%20Preciso%20de%20uma%20bateria." class="btn btn-zap">💬 Chamar no WhatsApp</a>
       <a href="tel:+5534999434485" class="btn btn-tel">📞 Ligar agora</a>
@@ -226,6 +241,18 @@
     <div class="fi"><span class="em">🕐</span> Plantão 24 Horas</div>
     <div class="fi"><span class="em">🛡️</span> Garantia de Verdade</div>
     <div class="fi"><span class="em">💳</span> Parcele em até 10x</div>
+  </div>
+</div>
+
+<!-- ===== BASE DE TROCA ===== -->
+<div class="troca">
+  <div class="container troca-in">
+    <div class="troca-ico">🔋</div>
+    <div>
+      <h3>Melhor preço na <span class="hl">base de troca</span></h3>
+      <p>Traga sua bateria velha e pague menos na nova. Consulte o valor agora, sem compromisso.</p>
+    </div>
+    <a href="https://wa.me/5534999434485?text=Ol%C3%A1!%20Quero%20o%20pre%C3%A7o%20da%20bateria%20na%20base%20de%20troca." class="btn btn-zap">💬 Ver preço</a>
   </div>
 </div>
 
@@ -249,7 +276,6 @@
     <h3 class="reveal">Trabalhamos com as melhores marcas</h3>
     <div class="marcas-row">
       <div class="marca-logo reveal"><img src="/logo-moura.webp" alt="Moura" loading="lazy"></div>
-      <div class="marca-logo full reveal"><img src="/images.jpg" alt="Heliar" loading="lazy"></div>
       <div class="marca-logo reveal"><img src="/logo_baterias-zetta_VdqsSb.png" alt="Zetta" loading="lazy"></div>
       <div class="marca-logo reveal"><img src="/ac-delco-vector-logo-400x400.png" alt="ACDelco" loading="lazy"></div>
       <div class="marca-logo reveal"><img src="/brand.gif" alt="Cral" loading="lazy"></div>
@@ -322,6 +348,21 @@
     </div>
   </div>
 </section>
+
+<!-- ===== PAGAMENTO ===== -->
+<div class="pagamento">
+  <div class="container">
+    <h3 class="reveal">Formas de pagamento</h3>
+    <div class="cartoes reveal">
+      <span class="card pix">Pix</span>
+      <span class="card">Visa</span>
+      <span class="card">Mastercard</span>
+      <span class="card">Elo</span>
+      <span class="card">Dinheiro</span>
+      <span class="card destaque">Até 10x sem juros</span>
+    </div>
+  </div>
+</div>
 
 <!-- ===== RODAPÉ ===== -->
 <footer>
