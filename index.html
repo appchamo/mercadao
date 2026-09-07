@@ -105,9 +105,11 @@
   .marcas{background:var(--preto);color:#fff;padding:50px 0}
   .marcas h3{text-align:center;font-family:'Oswald',sans-serif;font-weight:600;font-size:1.35rem;text-transform:uppercase;letter-spacing:1.5px;color:var(--amarelo);margin-bottom:26px}
   .marcas-row{display:flex;justify-content:center;align-items:center;flex-wrap:wrap;gap:24px}
-  .marca-logo{background:#fff;border-radius:14px;padding:16px 26px;height:78px;display:flex;align-items:center;justify-content:center;transition:.3s;box-shadow:0 6px 18px rgba(0,0,0,.25)}
-  .marca-logo img{max-height:44px;max-width:130px;object-fit:contain}
+  .marca-logo{background:#fff;border-radius:16px;padding:22px 34px;height:110px;min-width:170px;display:flex;align-items:center;justify-content:center;transition:.3s;box-shadow:0 6px 18px rgba(0,0,0,.25)}
+  .marca-logo img{max-height:66px;max-width:170px;object-fit:contain}
   .marca-logo:hover{transform:translateY(-6px)}
+  .marca-logo.dark{background:#000}
+  .marca-logo.dark img{max-height:92px;max-width:150px}
   .marca-logo.full{padding:0;overflow:hidden;width:120px}
   .marca-logo.full img{max-height:78px;max-width:100%;width:100%;height:78px;object-fit:cover}
 
@@ -276,7 +278,7 @@
     <h3 class="reveal">Trabalhamos com as melhores marcas</h3>
     <div class="marcas-row">
       <div class="marca-logo reveal"><img src="/logo-moura.webp" alt="Moura" loading="lazy"></div>
-      <div class="marca-logo reveal"><img src="/logo_baterias-zetta_VdqsSb.png" alt="Zetta" loading="lazy"></div>
+      <div class="marca-logo dark reveal"><img src="/logo_baterias-zetta_VdqsSb.png" alt="Zetta" loading="lazy"></div>
       <div class="marca-logo reveal"><img src="/ac-delco-vector-logo-400x400.png" alt="ACDelco" loading="lazy"></div>
       <div class="marca-logo reveal"><img src="/brand.gif" alt="Cral" loading="lazy"></div>
     </div>
