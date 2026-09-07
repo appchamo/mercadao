@@ -118,10 +118,11 @@
   .cat-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:24px}
   .cat{background:#fff;border-radius:var(--radius);overflow:hidden;box-shadow:0 6px 22px rgba(0,0,0,.07);transition:.3s;position:relative}
   .cat:hover{transform:translateY(-10px);box-shadow:var(--sombra)}
-  .cat .thumb{height:160px;background:linear-gradient(135deg,var(--preto),var(--preto-2));display:grid;place-items:center;font-size:3.4rem;position:relative;overflow:hidden}
-  .cat .thumb::after{content:'';position:absolute;inset:0;background:radial-gradient(circle at 70% 30%,rgba(246,178,27,.35),transparent 60%);transition:.3s}
-  .cat:hover .thumb::after{background:radial-gradient(circle at 70% 30%,rgba(246,178,27,.6),transparent 60%)}
-  .cat .thumb span{position:relative;z-index:2}
+  .cat .thumb{height:190px;background:var(--preto);position:relative;overflow:hidden}
+  .cat .thumb img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:1;transition:.5s}
+  .cat:hover .thumb img{transform:scale(1.07)}
+  .cat .thumb::after{content:'';position:absolute;inset:0;z-index:2;background:linear-gradient(180deg,rgba(0,0,0,.08),rgba(20,20,20,.55));transition:.3s}
+  .cat .thumb .cat-badge{position:absolute;top:12px;right:12px;z-index:3;font-size:1.4rem;width:44px;height:44px;border-radius:50%;background:rgba(0,0,0,.5);backdrop-filter:blur(2px);display:grid;place-items:center;box-shadow:0 4px 12px rgba(0,0,0,.4)}
   .cat h3{font-family:'Oswald',sans-serif;font-weight:600;padding:20px 20px 6px;color:var(--preto);font-size:1.25rem;text-transform:uppercase;letter-spacing:1px}
   .cat p{padding:0 20px 24px;color:var(--cinza-txt);font-size:.92rem}
 
@@ -291,10 +292,10 @@
     <h2 class="reveal">Bateria pra <span class="hl">todo veículo</span></h2>
     <p class="sub reveal">Carro, moto, caminhão ou start-stop. Tem pra tudo, novinha e lacrada.</p>
     <div class="cat-grid">
-      <div class="cat reveal"><div class="thumb"><span>🚗</span></div><h3>Bateria de Carro</h3><p>Modelos originais, EFB e AGM para todos os carros.</p></div>
-      <div class="cat reveal"><div class="thumb"><span>🏍️</span></div><h3>Bateria de Moto</h3><p>Para todas as cilindradas, com garantia.</p></div>
-      <div class="cat reveal"><div class="thumb"><span>🚚</span></div><h3>Bateria de Caminhão</h3><p>Alta performance para veículos pesados e frotas.</p></div>
-      <div class="cat reveal"><div class="thumb"><span>⚙️</span></div><h3>Start-Stop</h3><p>Baterias EFB e AGM para carros com sistema start-stop.</p></div>
+      <div class="cat reveal"><div class="thumb"><img src="https://images.unsplash.com/photo-1494363730993-e83a809ca9a0?auto=format&fit=crop&crop=entropy&w=900&h=680&q=70" alt="Bateria de carro" loading="lazy"><span class="cat-badge">🚗</span></div><h3>Bateria de Carro</h3><p>Modelos originais, EFB e AGM para todos os carros.</p></div>
+      <div class="cat reveal"><div class="thumb"><img src="https://images.unsplash.com/photo-1756728906350-b0e266968c31?auto=format&fit=crop&crop=entropy&w=900&h=680&q=70" alt="Bateria de moto" loading="lazy"><span class="cat-badge">🏍️</span></div><h3>Bateria de Moto</h3><p>Para todas as cilindradas, com garantia.</p></div>
+      <div class="cat reveal"><div class="thumb"><img src="https://images.unsplash.com/photo-1501700493788-fa1a4fc9fe62?auto=format&fit=crop&crop=entropy&w=900&h=680&q=70" alt="Bateria de caminhão" loading="lazy"><span class="cat-badge">🚚</span></div><h3>Bateria de Caminhão</h3><p>Alta performance para veículos pesados e frotas.</p></div>
+      <div class="cat reveal"><div class="thumb"><img src="https://images.unsplash.com/photo-1578452171578-a605cb38abe1?auto=format&fit=crop&crop=entropy&w=900&h=680&q=70" alt="Bateria start-stop" loading="lazy"><span class="cat-badge">⚙️</span></div><h3>Start-Stop</h3><p>Baterias EFB e AGM para carros com sistema start-stop.</p></div>
     </div>
   </div>
 </section>
