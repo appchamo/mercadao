@@ -432,6 +432,12 @@
     entries.forEach(en=>{if(en.isIntersecting){en.target.classList.add('show');io.unobserve(en.target)}});
   },{threshold:.15});
   document.querySelectorAll('.reveal').forEach((el,i)=>{el.style.transitionDelay=(i%4*80)+'ms';io.observe(el)});
+
+  // Conversao Google Ads: dispara em clique no WhatsApp e no Ligar
+  function gadsLead(){ if(typeof gtag==='function'){ gtag('event','conversion',{'send_to':'AW-17777432691/L2iqCM_ksf8cEPOw-JxC'}); } }
+  document.querySelectorAll('a[href^="https://wa.me"], a[href^="tel:"]').forEach(function(a){
+    a.addEventListener('click', gadsLead);
+  });
 </script>
 </body>
 </html>
