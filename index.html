@@ -2,8 +2,8 @@
 <html lang="pt-BR">
 <head>
 <meta charset="UTF-8">
-<link rel="icon" type="image/png" href="/logo_1.png">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" type="image/png" href="/logo_1.png">
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17777432691"></script>
 <script>
@@ -13,431 +13,523 @@
   gtag('config', 'AW-17777432691');
 </script>
 <title>Mercadão das Baterias — Baterias em Patrocínio-MG | Plantão 24h</title>
-<meta name="description" content="Baterias Moura, Cral e ACDelco para carro, moto e caminhão em Patrocínio-MG. Entrega e instalação grátis, plantão 24h e o melhor preço na base de troca.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Poppins:ital,wght@0,400;0,500;0,600;0,700;0,800;1,600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Oswald:wght@500;600;700&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <style>
-  :root{
-    --amarelo:#F6B21B;
-    --amarelo-claro:#FFD24C;
-    --amarelo-esc:#E0940A;
-    --vermelho:#E01F26;
-    --vermelho-esc:#B0151B;
-    --preto:#141414;
-    --preto-2:#1f1f1f;
-    --cinza:#f5f5f5;
-    --cinza-txt:#5c5c5c;
-    --branco:#ffffff;
-    --verde-zap:#25d366;
-    --radius:18px;
-    --sombra:0 12px 40px rgba(0,0,0,.14);
-    --sombra-amarela:0 12px 34px rgba(246,178,27,.4);
-  }
-  *{margin:0;padding:0;box-sizing:border-box}
-  html{scroll-behavior:smooth}
-  body{font-family:'Poppins',system-ui,sans-serif;color:var(--preto);background:var(--branco);line-height:1.6;overflow-x:hidden}
-  img{max-width:100%;display:block}
-  a{text-decoration:none;color:inherit}
-  .container{width:min(1200px,92%);margin:0 auto}
-  section{padding:80px 0;position:relative}
-  h2{font-family:'Oswald',sans-serif;font-weight:600;font-size:clamp(2rem,5.5vw,3.4rem);color:var(--preto);text-align:center;line-height:1.12;text-transform:uppercase;letter-spacing:1.5px}
-  h2 .hl{color:var(--vermelho)}
-  .sub{text-align:center;color:var(--cinza-txt);max-width:640px;margin:14px auto 50px;font-size:1.08rem}
+:root{
+  --bg:#08080a; --bg2:#101014; --surface:#15151b; --surface2:#1c1c24;
+  --amarelo:#F6B21B; --amarelo2:#FFD24C; --amarelo-esc:#E0940A;
+  --vermelho:#E01F26; --verde:#25d366;
+  --txt:#f4f4f6; --muted:#a2a2ad; --line:rgba(255,255,255,.08);
+  --radius:22px;
+  --glow-y:0 0 0 1px rgba(246,178,27,.35), 0 18px 60px rgba(246,178,27,.18);
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:'Inter',system-ui,sans-serif;background:var(--bg);color:var(--txt);line-height:1.6;overflow-x:hidden;-webkit-font-smoothing:antialiased}
+img{max-width:100%;display:block}
+a{text-decoration:none;color:inherit}
+.wrap{width:min(1240px,100%);margin:0 auto;padding-inline:clamp(20px,5vw,64px)}
+section{position:relative;padding:110px 0}
+h2{font-family:'Anton',sans-serif;font-weight:400;font-size:clamp(2.1rem,5.5vw,4rem);line-height:1;letter-spacing:.5px;text-transform:uppercase}
+h2 .y{color:var(--amarelo)}
+h2 .r{color:var(--vermelho)}
+.eyebrow{display:inline-flex;align-items:center;gap:9px;font-family:'Oswald',sans-serif;font-weight:600;font-size:.82rem;letter-spacing:3px;text-transform:uppercase;color:var(--amarelo);background:rgba(246,178,27,.08);border:1px solid rgba(246,178,27,.25);padding:8px 16px;border-radius:40px}
+.eyebrow .dot{width:8px;height:8px;border-radius:50%;background:var(--vermelho);box-shadow:0 0 0 0 rgba(224,31,38,.7);animation:pulse 1.6s infinite}
+@keyframes pulse{0%{box-shadow:0 0 0 0 rgba(224,31,38,.6)}70%{box-shadow:0 0 0 9px rgba(224,31,38,0)}100%{box-shadow:0 0 0 0 rgba(224,31,38,0)}}
+.lead{color:var(--muted);font-size:1.08rem;max-width:600px}
 
-  /* ==== REVEAL ==== */
-  .reveal{opacity:0;transform:translateY(40px);transition:opacity .7s ease,transform .7s ease}
-  .reveal.show{opacity:1;transform:none}
+/* ambient background */
+.bg-fx{position:fixed;inset:0;z-index:0;pointer-events:none;overflow:hidden}
+.bg-fx .orb{position:absolute;border-radius:50%;filter:blur(80px);opacity:.55}
+.bg-fx .o1{width:520px;height:520px;background:radial-gradient(circle,rgba(246,178,27,.35),transparent 70%);top:-140px;right:-120px;animation:float1 14s ease-in-out infinite alternate}
+.bg-fx .o2{width:460px;height:460px;background:radial-gradient(circle,rgba(224,31,38,.28),transparent 70%);bottom:10%;left:-160px;animation:float2 17s ease-in-out infinite alternate}
+.bg-fx .grid{position:absolute;inset:0;background-image:linear-gradient(rgba(255,255,255,.03) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.03) 1px,transparent 1px);background-size:60px 60px;mask-image:radial-gradient(ellipse at 50% 0%,#000,transparent 75%)}
+@keyframes float1{to{transform:translate(-60px,80px) scale(1.1)}}
+@keyframes float2{to{transform:translate(80px,-60px) scale(1.15)}}
+main,header,footer{position:relative;z-index:1}
 
-  /* ==== HEADER ==== */
-  header{position:fixed;top:0;left:0;right:0;z-index:100;transition:.35s;padding:16px 0}
-  header.scrolled{background:var(--preto);box-shadow:0 4px 24px rgba(0,0,0,.35);padding:8px 0}
-  .nav{display:flex;align-items:center;justify-content:space-between}
-  .logo-badge{display:flex;align-items:center;gap:12px}
-  .logo-badge svg{width:56px;height:56px;transition:.35s;filter:drop-shadow(0 3px 6px rgba(0,0,0,.3))}
-  header.scrolled .logo-badge svg{width:46px;height:46px}
-  .logo-badge .logo-img{width:56px;height:56px;border-radius:14px;object-fit:cover;transition:.35s;box-shadow:0 4px 12px rgba(0,0,0,.4)}
-  header.scrolled .logo-badge .logo-img{width:46px;height:46px}
-  .logo-badge .lt{font-family:'Oswald',sans-serif;font-weight:700;color:#fff;font-size:1.2rem;line-height:1;text-transform:uppercase;letter-spacing:1px;text-shadow:0 2px 6px rgba(0,0,0,.5)}
-  .logo-badge .lt small{display:block;font-family:'Poppins';font-weight:600;font-size:.62rem;color:var(--amarelo);letter-spacing:2px}
-  .nav-links{display:flex;gap:30px}
-  .nav-links a{color:#fff;font-weight:600;font-size:.95rem;position:relative;text-shadow:0 1px 4px rgba(0,0,0,.4)}
-  .nav-links a::after{content:'';position:absolute;left:0;bottom:-6px;width:0;height:3px;background:var(--amarelo);transition:.25s;border-radius:3px}
-  .nav-links a:hover::after{width:100%}
-  .nav-tel{background:var(--amarelo);color:var(--preto)!important;padding:11px 22px;border-radius:40px;font-weight:800;font-size:.95rem;box-shadow:var(--sombra-amarela);transition:.25s;text-shadow:none!important}
-  .nav-tel:hover{transform:translateY(-2px);background:var(--amarelo-claro)}
-  .burger{display:none;background:none;border:0;color:#fff;font-size:1.8rem;cursor:pointer}
+/* buttons */
+.btn{display:inline-flex;align-items:center;gap:10px;padding:16px 30px;border-radius:40px;font-weight:800;font-size:1rem;border:0;cursor:pointer;transition:transform .25s cubic-bezier(.2,.8,.2,1),box-shadow .25s;position:relative;overflow:hidden;letter-spacing:.2px}
+.btn::after{content:'';position:absolute;top:0;left:-120%;width:70%;height:100%;background:linear-gradient(120deg,transparent,rgba(255,255,255,.35),transparent);transform:skewX(-20deg);transition:left .6s}
+.btn:hover::after{left:130%}
+.btn-zap{background:linear-gradient(135deg,#2ee06f,#1fae54);color:#04220f;box-shadow:0 12px 34px rgba(37,211,102,.4)}
+.btn-zap:hover{transform:translateY(-4px) scale(1.02);box-shadow:0 18px 44px rgba(37,211,102,.55)}
+.btn-tel{background:linear-gradient(135deg,var(--amarelo2),var(--amarelo));color:#241800;box-shadow:0 12px 34px rgba(246,178,27,.38)}
+.btn-tel:hover{transform:translateY(-4px) scale(1.02);box-shadow:0 18px 44px rgba(246,178,27,.5)}
+.btn-ghost{background:rgba(255,255,255,.06);color:#fff;border:1px solid var(--line);backdrop-filter:blur(6px)}
+.btn-ghost:hover{transform:translateY(-3px);background:rgba(255,255,255,.1)}
 
-  /* ==== HERO ==== */
-  .hero{min-height:100vh;display:flex;align-items:center;color:#fff;position:relative;overflow:hidden;
-    background:linear-gradient(120deg,rgba(20,20,20,.92),rgba(20,20,20,.72) 55%,rgba(224,31,38,.55)),
-    url('/fachada.jpg') center 40%/cover}
-  .hero::before{content:'';position:absolute;inset:0;background:radial-gradient(circle at 80% 20%,rgba(246,178,27,.28),transparent 45%);animation:glow 6s ease-in-out infinite alternate}
-  @keyframes glow{from{opacity:.5}to{opacity:1}}
-  .hero-inner{max-width:760px;position:relative;z-index:2}
-  .badge{display:inline-flex;align-items:center;gap:8px;background:var(--vermelho);color:#fff;font-weight:700;padding:8px 18px;border-radius:40px;font-size:.85rem;margin-bottom:22px;text-transform:uppercase;letter-spacing:1px;animation:fadeDown .8s both}
-  .badge .pulse-dot{width:9px;height:9px;background:#fff;border-radius:50%;animation:pulse 1.4s infinite}
-  @keyframes pulse{0%{box-shadow:0 0 0 0 rgba(255,255,255,.7)}70%{box-shadow:0 0 0 8px rgba(255,255,255,0)}100%{box-shadow:0 0 0 0 rgba(255,255,255,0)}}
-  .hero h1{font-family:'Oswald',sans-serif;font-weight:600;font-size:clamp(1.8rem,4.4vw,2.9rem);line-height:1.1;text-transform:uppercase;letter-spacing:1.5px;margin-bottom:20px;animation:fadeDown 1s both}
-  .hero h1 .hl{color:var(--amarelo)}
-  .hero p{font-size:clamp(1.05rem,2.4vw,1.3rem);color:#eee;margin-bottom:34px;max-width:580px;animation:fadeUp 1.1s both}
-  .hero-cta{display:flex;gap:16px;flex-wrap:wrap;animation:fadeUp 1.3s both}
-  .hero-pay{display:flex;align-items:center;gap:14px;flex-wrap:wrap;margin-top:24px;animation:fadeUp 1.5s both}
-  .hero-pay .lbl{color:#eaeaea;font-weight:600;font-size:.82rem;text-transform:uppercase;letter-spacing:1.5px}
-  .hero-pay .pay-strip{height:42px;width:auto;filter:drop-shadow(0 2px 6px rgba(0,0,0,.4))}
-  .hero-pay .parcelas{color:var(--amarelo);font-weight:800;font-size:.9rem}
-  @keyframes fadeDown{from{opacity:0;transform:translateY(-24px)}to{opacity:1;transform:none}}
-  @keyframes fadeUp{from{opacity:0;transform:translateY(24px)}to{opacity:1;transform:none}}
-  .btn{display:inline-flex;align-items:center;gap:10px;padding:17px 34px;border-radius:44px;font-weight:800;font-size:1.05rem;transition:.25s;cursor:pointer;border:0;letter-spacing:.3px}
-  .btn-zap{background:var(--verde-zap);color:#fff;box-shadow:0 10px 28px rgba(37,211,102,.45)}
-  .btn-zap:hover{transform:translateY(-4px) scale(1.02);box-shadow:0 14px 34px rgba(37,211,102,.6)}
-  .btn-tel{background:var(--amarelo);color:var(--preto);box-shadow:var(--sombra-amarela)}
-  .btn-tel:hover{transform:translateY(-4px) scale(1.02);background:var(--amarelo-claro)}
-  .scroll-ind{position:absolute;bottom:26px;left:50%;transform:translateX(-50%);color:#fff;font-size:1.8rem;animation:bob 1.8s infinite;z-index:2;opacity:.8}
-  @keyframes bob{0%,100%{transform:translate(-50%,0)}50%{transform:translate(-50%,10px)}}
+/* header */
+header{position:fixed;top:0;left:0;right:0;z-index:100;transition:.35s;padding:20px 0}
+header.scrolled{padding:12px 0;background:rgba(8,8,10,.72);backdrop-filter:blur(16px);border-bottom:1px solid var(--line)}
+.nav{display:flex;align-items:center;justify-content:space-between}
+.brand{display:flex;align-items:center;gap:12px}
+.brand img{width:52px;height:52px;border-radius:13px;object-fit:cover;box-shadow:0 6px 16px rgba(0,0,0,.5);transition:.35s}
+header.scrolled .brand img{width:44px;height:44px}
+.brand .bt{font-family:'Oswald',sans-serif;font-weight:700;font-size:1.15rem;line-height:1;text-transform:uppercase;letter-spacing:1px}
+.brand .bt small{display:block;font-size:.6rem;letter-spacing:3px;color:var(--amarelo);font-weight:600}
+.nav-links{display:flex;gap:34px}
+.nav-links a{font-family:'Oswald',sans-serif;font-weight:500;font-size:.95rem;color:#dcdce2;position:relative;letter-spacing:.5px}
+.nav-links a::after{content:'';position:absolute;left:0;bottom:-7px;width:0;height:2px;background:var(--amarelo);transition:.3s;border-radius:2px}
+.nav-links a:hover{color:#fff}.nav-links a:hover::after{width:100%}
+.nav-tel{display:inline-flex;align-items:center;gap:8px;background:var(--amarelo);color:#241800;font-weight:800;padding:11px 20px;border-radius:40px;font-size:.92rem;transition:.25s;box-shadow:0 8px 22px rgba(246,178,27,.3)}
+.nav-tel:hover{transform:translateY(-2px);background:var(--amarelo2)}
+.burger{display:none;background:none;border:0;color:#fff;font-size:1.7rem;cursor:pointer}
 
-  /* ==== FAIXA / STATS ==== */
-  .faixa{background:var(--amarelo);padding:0;position:relative;z-index:3}
-  .faixa .container{display:flex;flex-wrap:wrap;justify-content:space-around;text-align:center;padding:26px 0;gap:18px}
-  .faixa .fi{font-weight:800;font-size:1.02rem;color:var(--preto);display:flex;align-items:center;gap:10px}
-  .faixa .fi .em{font-size:1.5rem}
+/* hero */
+.hero{min-height:100vh;display:flex;align-items:center;padding-top:120px;overflow:hidden}
+.hero-bg{position:absolute;inset:0;z-index:-1;background:
+  linear-gradient(105deg,rgba(8,8,10,.96) 0%,rgba(8,8,10,.82) 42%,rgba(8,8,10,.35) 70%,rgba(224,31,38,.35) 100%),
+  url('/fachada.jpg') center 42%/cover no-repeat}
+.hero-bg::after{content:'';position:absolute;inset:0;background:radial-gradient(circle at 78% 30%,rgba(246,178,27,.3),transparent 45%);animation:glow 7s ease-in-out infinite alternate}
+@keyframes glow{from{opacity:.55}to{opacity:1}}
+.hero-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:40px;align-items:center;width:100%}
+.hero-grid>*{min-width:0}
+.hero-inner{max-width:640px;min-width:0}
+.hero h1{font-family:'Anton',sans-serif;font-weight:400;font-size:clamp(2.4rem,5vw,4.4rem);line-height:1;text-transform:uppercase;letter-spacing:1px;margin:22px 0 20px;overflow-wrap:break-word}
+.hero h1 .spark{position:relative;color:var(--amarelo)}
+.hero h1 .spark::after{content:'';position:absolute;left:0;bottom:6px;width:100%;height:.16em;background:linear-gradient(90deg,var(--amarelo),var(--vermelho));border-radius:4px;transform:scaleX(0);transform-origin:left;animation:underline 1s .5s forwards cubic-bezier(.2,.8,.2,1)}
+@keyframes underline{to{transform:scaleX(1)}}
+.hero p.sub{font-size:clamp(1.05rem,2.2vw,1.25rem);color:#e6e6ea;max-width:540px;margin-bottom:32px}
+.hero p.sub b{color:#fff}
+.hero-cta{display:flex;gap:14px;flex-wrap:wrap;margin-bottom:30px}
+.trust{display:flex;align-items:center;gap:16px;flex-wrap:wrap;padding-top:26px;border-top:1px solid var(--line)}
+.trust .lbl{font-family:'Oswald',sans-serif;font-size:.78rem;letter-spacing:2px;text-transform:uppercase;color:var(--muted)}
+.trust img{height:38px;filter:drop-shadow(0 3px 8px rgba(0,0,0,.5))}
+.trust .parc{color:var(--amarelo);font-weight:800;font-size:.9rem}
+/* hero side visual card */
+.hero-card{position:relative;justify-self:end;width:100%;max-width:380px;aspect-ratio:4/5;border-radius:26px;overflow:hidden;border:1px solid var(--line);box-shadow:0 30px 80px rgba(0,0,0,.6);background:#000}
+.hero-card img{width:100%;height:100%;object-fit:cover;transform:scale(1.05);animation:kb 12s ease-in-out infinite alternate}
+@keyframes kb{to{transform:scale(1.16)}}
+.hero-card .tag{position:absolute;left:18px;bottom:18px;right:18px;background:rgba(10,10,12,.6);backdrop-filter:blur(10px);border:1px solid var(--line);border-radius:16px;padding:14px 18px;display:flex;align-items:center;gap:12px}
+.hero-card .tag .em{font-size:1.7rem}
+.hero-card .tag b{display:block;font-size:.98rem}
+.hero-card .tag span{font-size:.82rem;color:var(--muted)}
+.scrollcue{position:absolute;bottom:24px;left:50%;transform:translateX(-50%);color:#fff;opacity:.6;font-size:1.6rem;animation:bob 1.8s infinite}
+@keyframes bob{0%,100%{transform:translate(-50%,0)}50%{transform:translate(-50%,9px)}}
 
-  /* ==== DIFERENCIAIS ==== */
-  .cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:28px}
-  .card{background:var(--branco);border-radius:var(--radius);padding:38px 28px;text-align:center;transition:.3s;border:1px solid #eee;position:relative;overflow:hidden}
-  .card::before{content:'';position:absolute;top:0;left:0;width:100%;height:5px;background:linear-gradient(90deg,var(--amarelo),var(--vermelho));transform:scaleX(0);transform-origin:left;transition:.3s}
-  .card:hover{transform:translateY(-10px);box-shadow:var(--sombra)}
-  .card:hover::before{transform:scaleX(1)}
-  .card .ico{width:72px;height:72px;margin:0 auto 18px;border-radius:20px;background:linear-gradient(135deg,var(--amarelo),var(--amarelo-esc));display:grid;place-items:center;font-size:2.1rem;box-shadow:var(--sombra-amarela);transition:.3s}
-  .card:hover .ico{transform:rotate(-8deg) scale(1.08)}
-  .card h3{font-family:'Oswald',sans-serif;font-weight:600;color:var(--preto);font-size:1.3rem;margin-bottom:10px;text-transform:uppercase;letter-spacing:1px}
-  .card p{color:var(--cinza-txt);font-size:.97rem}
+/* stats */
+.stats{padding:0}
+.stats .wrap{margin-top:-40px}
+.stats-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+.stat{background:linear-gradient(180deg,var(--surface),var(--bg2));border:1px solid var(--line);border-radius:var(--radius);padding:28px 24px;text-align:center;position:relative;overflow:hidden;transition:.3s}
+.stat::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--amarelo),var(--vermelho));opacity:.7}
+.stat:hover{transform:translateY(-6px);border-color:rgba(246,178,27,.3)}
+.stat .em{font-size:1.9rem;margin-bottom:8px}
+.stat .num{font-family:'Anton',sans-serif;font-size:2.4rem;color:var(--amarelo);line-height:1}
+.stat .cap{font-family:'Oswald',sans-serif;font-size:.85rem;letter-spacing:1.5px;text-transform:uppercase;color:var(--muted);margin-top:6px}
 
-  /* ==== MARCAS ==== */
-  .marcas{background:var(--preto);color:#fff;padding:50px 0}
-  .marcas h3{text-align:center;font-family:'Oswald',sans-serif;font-weight:600;font-size:1.35rem;text-transform:uppercase;letter-spacing:1.5px;color:var(--amarelo);margin-bottom:26px}
-  .marcas-row{display:flex;justify-content:center;align-items:center;flex-wrap:wrap;gap:24px}
-  .marca-logo{background:#fff;border-radius:16px;padding:22px 34px;height:110px;min-width:170px;display:flex;align-items:center;justify-content:center;transition:.3s;box-shadow:0 6px 18px rgba(0,0,0,.25)}
-  .marca-logo img{max-height:66px;max-width:170px;object-fit:contain}
-  .marca-logo:hover{transform:translateY(-6px)}
-  .marca-logo.dark{background:#000}
-  .marca-logo.dark img{max-height:92px;max-width:150px}
-  .marca-logo.full{padding:0;overflow:hidden;width:120px}
-  .marca-logo.full img{max-height:78px;max-width:100%;width:100%;height:78px;object-fit:cover}
+/* section head */
+.shead{text-align:center;max-width:660px;margin:0 auto 60px}
+.shead .lead{margin:16px auto 0}
 
-  /* ==== CATEGORIAS ==== */
-  .categorias{background:var(--cinza)}
-  .cat-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:24px}
-  .cat{background:#fff;border-radius:var(--radius);overflow:hidden;box-shadow:0 6px 22px rgba(0,0,0,.07);transition:.3s;position:relative}
-  .cat:hover{transform:translateY(-10px);box-shadow:var(--sombra)}
-  .cat .thumb{height:190px;background:var(--preto);position:relative;overflow:hidden}
-  .cat .thumb img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:1;transition:.5s}
-  .cat:hover .thumb img{transform:scale(1.07)}
-  .cat .thumb::after{content:'';position:absolute;inset:0;z-index:2;background:linear-gradient(180deg,rgba(0,0,0,.08),rgba(20,20,20,.55));transition:.3s}
-  .cat .thumb .cat-badge{position:absolute;top:12px;right:12px;z-index:3;font-size:1.4rem;width:44px;height:44px;border-radius:50%;background:rgba(0,0,0,.5);backdrop-filter:blur(2px);display:grid;place-items:center;box-shadow:0 4px 12px rgba(0,0,0,.4)}
-  .cat h3{font-family:'Oswald',sans-serif;font-weight:600;padding:20px 20px 6px;color:var(--preto);font-size:1.25rem;text-transform:uppercase;letter-spacing:1px}
-  .cat p{padding:0 20px 24px;color:var(--cinza-txt);font-size:.92rem}
+/* features bento */
+.feat-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+.feat{grid-column:span 1;background:linear-gradient(180deg,var(--surface),var(--bg2));border:1px solid var(--line);border-radius:var(--radius);padding:32px 26px;position:relative;overflow:hidden;transition:.35s}
+.feat:nth-child(1),.feat:nth-child(4){grid-column:span 2}
+.feat::after{content:'';position:absolute;inset:0;border-radius:var(--radius);padding:1px;background:linear-gradient(135deg,rgba(246,178,27,.5),transparent 40%);-webkit-mask:linear-gradient(#000 0 0) content-box,linear-gradient(#000 0 0);-webkit-mask-composite:xor;mask-composite:exclude;opacity:0;transition:.35s}
+.feat:hover{transform:translateY(-8px);box-shadow:0 24px 60px rgba(0,0,0,.5)}
+.feat:hover::after{opacity:1}
+.feat .ico{width:60px;height:60px;border-radius:16px;display:grid;place-items:center;font-size:1.7rem;background:linear-gradient(135deg,var(--amarelo),var(--amarelo-esc));box-shadow:0 10px 24px rgba(246,178,27,.35);margin-bottom:18px;transition:.35s}
+.feat:hover .ico{transform:rotate(-8deg) scale(1.08)}
+.feat h3{font-family:'Oswald',sans-serif;font-weight:600;font-size:1.3rem;text-transform:uppercase;letter-spacing:.5px;margin-bottom:8px}
+.feat p{color:var(--muted);font-size:.96rem}
 
-  /* ==== CARROSSEL ==== */
-  .carousel{position:relative;max-width:1000px;margin:0 auto;border-radius:var(--radius);overflow:hidden;box-shadow:var(--sombra);border:4px solid var(--preto)}
-  .slides{display:flex;transition:transform .6s cubic-bezier(.7,0,.3,1)}
-  .slide{min-width:100%;height:480px}
-  .slide svg{width:100%;height:100%}
-  .slide img{width:100%;height:100%;object-fit:cover}
-  .car-btn{position:absolute;top:50%;transform:translateY(-50%);background:var(--amarelo);color:var(--preto);border:0;width:56px;height:56px;border-radius:50%;font-size:1.8rem;cursor:pointer;display:grid;place-items:center;transition:.25s;z-index:3;box-shadow:0 6px 18px rgba(0,0,0,.3);font-weight:800}
-  .car-btn:hover{background:var(--vermelho);color:#fff;transform:translateY(-50%) scale(1.1)}
-  .prev{left:18px}.next{right:18px}
-  .dots{display:flex;justify-content:center;gap:11px;margin-top:24px}
-  .dot{width:13px;height:13px;border-radius:50%;background:#d5d5d5;cursor:pointer;transition:.3s}
-  .dot.active{background:var(--vermelho);width:34px;border-radius:7px}
+/* marcas marquee */
+.marcas{padding:70px 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line);background:rgba(255,255,255,.015)}
+.marcas .t{text-align:center;font-family:'Oswald',sans-serif;font-weight:600;letter-spacing:3px;text-transform:uppercase;color:var(--muted);font-size:.85rem;margin-bottom:34px}
+.marquee{overflow:hidden;-webkit-mask:linear-gradient(90deg,transparent,#000 12%,#000 88%,transparent)}
+.marquee-track{display:flex;gap:22px;width:max-content;animation:scrollx 22s linear infinite}
+.marca{background:#fff;border-radius:16px;height:96px;min-width:180px;display:flex;align-items:center;justify-content:center;padding:18px 30px;box-shadow:0 8px 22px rgba(0,0,0,.3)}
+.marca.dark{background:#000;border:1px solid rgba(255,255,255,.1)}
+.marca img{max-height:56px;max-width:150px;object-fit:contain}
+.marca.dark img{max-height:80px}
+@keyframes scrollx{to{transform:translateX(-50%)}}
 
-  /* ==== CTA GRANDE ==== */
-  .cta-grande{background:linear-gradient(120deg,var(--vermelho),var(--vermelho-esc));color:#fff;text-align:center;overflow:hidden}
-  .cta-grande::before{content:'';position:absolute;inset:0;background:radial-gradient(circle at 20% 30%,rgba(246,178,27,.3),transparent 45%),radial-gradient(circle at 85% 70%,rgba(246,178,27,.25),transparent 40%)}
-  .cta-grande .container{position:relative;z-index:2}
-  .cta-grande h2{color:#fff}
-  .cta-grande h2 .hl{color:var(--amarelo)}
-  .cta-grande p{color:#ffe;max-width:560px;margin:16px auto 34px;font-size:1.15rem}
-  .cta-grande .hero-cta{justify-content:center}
+/* categorias */
+.cat-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+.catc{position:relative;border-radius:var(--radius);overflow:hidden;aspect-ratio:3/4;border:1px solid var(--line);cursor:pointer;background:#000}
+.catc img{width:100%;height:100%;object-fit:cover;transition:transform .7s cubic-bezier(.2,.8,.2,1);opacity:.9}
+.catc:hover img{transform:scale(1.1)}
+.catc::after{content:'';position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.05) 30%,rgba(8,8,10,.92));transition:.4s}
+.catc .body{position:absolute;left:0;right:0;bottom:0;padding:24px;z-index:2}
+.catc .em{position:absolute;top:16px;right:16px;z-index:3;width:46px;height:46px;border-radius:50%;background:rgba(10,10,12,.55);backdrop-filter:blur(6px);display:grid;place-items:center;font-size:1.35rem;border:1px solid var(--line)}
+.catc h3{font-family:'Oswald',sans-serif;font-weight:600;font-size:1.35rem;text-transform:uppercase;letter-spacing:.5px}
+.catc p{color:#c9c9d2;font-size:.9rem;margin-top:4px}
+.catc .go{display:inline-flex;align-items:center;gap:7px;margin-top:14px;color:var(--amarelo);font-weight:700;font-size:.9rem;opacity:0;transform:translateY(8px);transition:.35s}
+.catc:hover .go{opacity:1;transform:none}
 
-  /* ==== CONTATO + MAPA ==== */
-  .contato-grid{display:grid;grid-template-columns:1fr 1.1fr;gap:44px;align-items:stretch}
-  .info-box{background:var(--preto);color:#fff;border-radius:var(--radius);padding:42px;position:relative;overflow:hidden}
-  .info-box::before{content:'';position:absolute;top:-40px;right:-40px;width:160px;height:160px;background:radial-gradient(circle,rgba(246,178,27,.25),transparent 70%)}
-  .info-box h3{font-family:'Oswald',sans-serif;font-weight:600;font-size:1.6rem;margin-bottom:26px;text-transform:uppercase;letter-spacing:1.5px;position:relative}
-  .info-box h3 .hl{color:var(--amarelo)}
-  .info-item{display:flex;gap:16px;align-items:flex-start;margin-bottom:24px;position:relative}
-  .info-item .ico{background:var(--amarelo);color:var(--preto);width:48px;height:48px;border-radius:14px;display:grid;place-items:center;font-size:1.3rem;flex-shrink:0;box-shadow:var(--sombra-amarela)}
-  .info-item strong{display:block;color:#fff;font-size:1.02rem}
-  .info-item span{color:#bdbdbd;font-size:.95rem}
-  .map-box{border-radius:var(--radius);overflow:hidden;box-shadow:var(--sombra);min-height:440px;border:4px solid var(--preto)}
-  .map-box iframe{width:100%;height:100%;min-height:440px;border:0}
+/* troca highlight */
+.troca-band{position:relative;border-radius:28px;overflow:hidden;padding:48px;background:linear-gradient(120deg,#141317,#1c1a12);border:1px solid rgba(246,178,27,.2)}
+.troca-band::before{content:'';position:absolute;inset:0;background:radial-gradient(circle at 15% 30%,rgba(246,178,27,.18),transparent 45%),radial-gradient(circle at 90% 80%,rgba(224,31,38,.15),transparent 40%)}
+.troca-in{position:relative;display:flex;align-items:center;gap:26px;flex-wrap:wrap;justify-content:space-between}
+.troca-in .lft{display:flex;align-items:center;gap:22px}
+.troca-in .em{font-size:3rem;filter:drop-shadow(0 6px 16px rgba(246,178,27,.4))}
+.troca-in h3{font-family:'Anton',sans-serif;font-size:clamp(1.6rem,3.5vw,2.4rem);text-transform:uppercase;line-height:1}
+.troca-in h3 .y{color:var(--amarelo)}
+.troca-in p{color:var(--muted);margin-top:6px;max-width:440px}
 
-  /* ==== RODAPÉ ==== */
-  footer{background:var(--preto);color:#9a9a9a;padding:46px 0 30px;text-align:center;font-size:.92rem}
-  footer .logo-badge{justify-content:center;margin-bottom:18px}
-  footer .fnav{display:flex;justify-content:center;gap:24px;flex-wrap:wrap;margin-bottom:20px}
-  footer .fnav a{color:#ccc;font-weight:600}
-  footer .fnav a:hover{color:var(--amarelo)}
-  footer .cop{border-top:1px solid #2c2c2c;padding-top:20px;margin-top:6px}
-  footer .cop a{color:var(--amarelo)}
+/* estoque carrossel */
+.carousel{position:relative;max-width:1040px;margin:0 auto;border-radius:26px;overflow:hidden;border:1px solid var(--line);box-shadow:0 30px 80px rgba(0,0,0,.5)}
+.slides{display:flex;transition:transform .6s cubic-bezier(.7,0,.3,1)}
+.slide{min-width:100%;aspect-ratio:16/9;background:#000}
+.slide img{width:100%;height:100%;object-fit:cover}
+.cbtn{position:absolute;top:50%;transform:translateY(-50%);width:54px;height:54px;border-radius:50%;border:1px solid var(--line);background:rgba(10,10,12,.55);backdrop-filter:blur(8px);color:#fff;font-size:1.6rem;cursor:pointer;display:grid;place-items:center;z-index:3;transition:.25s}
+.cbtn:hover{background:var(--amarelo);color:#241800}
+.cprev{left:18px}.cnext{right:18px}
+.dots{display:flex;justify-content:center;gap:10px;margin-top:22px}
+.dot{width:10px;height:10px;border-radius:50%;background:rgba(255,255,255,.2);cursor:pointer;transition:.3s}
+.dot.on{background:var(--amarelo);width:30px;border-radius:6px}
 
-  /* ==== FLUTUANTE ==== */
-  .float-zap{position:fixed;bottom:24px;right:24px;background:var(--verde-zap);color:#fff;width:64px;height:64px;border-radius:50%;display:grid;place-items:center;font-size:2.1rem;box-shadow:0 8px 24px rgba(37,211,102,.5);z-index:99;animation:pulseZap 2s infinite;transition:.25s}
-  .float-zap:hover{transform:scale(1.1)}
-  @keyframes pulseZap{0%{box-shadow:0 0 0 0 rgba(37,211,102,.5)}70%{box-shadow:0 0 0 20px rgba(37,211,102,0)}100%{box-shadow:0 0 0 0 rgba(37,211,102,0)}}
+/* faq */
+.faq{max-width:820px;margin:0 auto}
+.qa{border:1px solid var(--line);border-radius:16px;margin-bottom:12px;overflow:hidden;background:var(--surface);transition:.3s}
+.qa.open{border-color:rgba(246,178,27,.35)}
+.qa q{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:20px 24px;cursor:pointer;font-family:'Oswald',sans-serif;font-weight:600;font-size:1.05rem;letter-spacing:.3px;quotes:none}
+.qa q .pl{color:var(--amarelo);font-size:1.4rem;transition:.3s;flex-shrink:0}
+.qa.open q .pl{transform:rotate(45deg)}
+.qa .a{max-height:0;overflow:hidden;transition:max-height .35s ease;color:var(--muted)}
+.qa .a p{padding:0 24px 22px}
 
-  /* ==== BASE DE TROCA ==== */
-  .troca{background:linear-gradient(120deg,var(--preto),var(--preto-2));color:#fff;padding:30px 0}
-  .troca-in{display:flex;align-items:center;gap:22px;flex-wrap:wrap;justify-content:center;text-align:center}
-  .troca-ico{font-size:2.6rem}
-  .troca h3{font-family:'Oswald',sans-serif;font-weight:600;font-size:1.5rem;text-transform:uppercase;letter-spacing:1px}
-  .troca h3 .hl{color:var(--amarelo)}
-  .troca p{color:#cfcfcf;font-size:1rem;max-width:520px;margin-top:4px}
-  /* ==== PAGAMENTO ==== */
-  .pagamento{background:var(--cinza);padding:46px 0;text-align:center}
-  .pagamento h3{font-family:'Oswald',sans-serif;font-weight:600;text-transform:uppercase;letter-spacing:1.5px;color:var(--preto);font-size:1.35rem;margin-bottom:22px}
-  .pagamento .pay-strip-full{max-width:560px;width:100%;margin:0 auto}
-  .pagamento .pay-note{margin-top:18px;color:var(--cinza-txt);font-weight:600}
-  .pagamento .pay-note strong{color:var(--amarelo-esc)}
+/* contato */
+.contato-grid{display:grid;grid-template-columns:1fr 1.15fr;gap:36px}
+.info{background:linear-gradient(180deg,var(--surface),var(--bg2));border:1px solid var(--line);border-radius:26px;padding:40px}
+.info h3{font-family:'Oswald',sans-serif;font-weight:600;font-size:1.5rem;text-transform:uppercase;margin-bottom:26px}
+.info h3 .y{color:var(--amarelo)}
+.iitem{display:flex;gap:16px;margin-bottom:22px}
+.iitem .ic{flex-shrink:0;width:46px;height:46px;border-radius:13px;background:linear-gradient(135deg,var(--amarelo),var(--amarelo-esc));display:grid;place-items:center;font-size:1.2rem;color:#241800}
+.iitem b{display:block}.iitem span{color:var(--muted);font-size:.94rem}
+.mapa{border-radius:26px;overflow:hidden;border:1px solid var(--line);min-height:440px}
+.mapa iframe{width:100%;height:100%;min-height:440px;border:0;filter:grayscale(.2) contrast(1.05)}
 
-  /* ==== RESPONSIVO ==== */
-  @media(max-width:860px){
-    .nav-links{display:none;position:absolute;top:100%;left:0;right:0;background:var(--preto);flex-direction:column;padding:24px;gap:20px;box-shadow:0 12px 30px rgba(0,0,0,.4)}
-    .nav-links.open{display:flex}
-    .nav-tel{display:none}
-    .burger{display:block}
-    .contato-grid{grid-template-columns:1fr}
-    .slide{height:320px}
-    header{background:var(--preto)}
-  }
+/* pagamento */
+.pay{text-align:center}
+.pay img{max-width:560px;width:100%;margin:0 auto}
+.pay p{color:var(--muted);margin-top:18px;font-weight:500}
+.pay p b{color:var(--amarelo)}
+
+/* CTA final */
+.cta-final{position:relative;border-radius:32px;overflow:hidden;text-align:center;padding:70px 40px;background:linear-gradient(120deg,var(--vermelho),#a3121a)}
+.cta-final::before{content:'';position:absolute;inset:0;background:radial-gradient(circle at 20% 30%,rgba(246,178,27,.3),transparent 45%),radial-gradient(circle at 85% 70%,rgba(0,0,0,.3),transparent 40%)}
+.cta-final .in{position:relative}
+.cta-final h2{color:#fff}.cta-final h2 .y{color:var(--amarelo2)}
+.cta-final p{color:#ffe8e8;max-width:520px;margin:16px auto 32px;font-size:1.1rem}
+.cta-final .hero-cta{justify-content:center}
+
+/* footer */
+footer{border-top:1px solid var(--line);padding:60px 0 34px;text-align:center;background:rgba(0,0,0,.3)}
+footer .brand{justify-content:center;margin-bottom:22px}
+footer .fnav{display:flex;justify-content:center;gap:26px;flex-wrap:wrap;margin-bottom:22px}
+footer .fnav a{color:#c9c9d2;font-family:'Oswald',sans-serif;letter-spacing:.5px}
+footer .fnav a:hover{color:var(--amarelo)}
+footer .cop{color:var(--muted);font-size:.88rem;border-top:1px solid var(--line);padding-top:22px;margin-top:10px}
+
+/* floating + mobile bar */
+.float-zap{position:fixed;bottom:26px;right:26px;width:64px;height:64px;border-radius:50%;background:linear-gradient(135deg,#2ee06f,#1fae54);color:#fff;display:grid;place-items:center;font-size:2rem;z-index:90;box-shadow:0 12px 30px rgba(37,211,102,.5);animation:pz 2.2s infinite}
+@keyframes pz{0%{box-shadow:0 0 0 0 rgba(37,211,102,.5)}70%{box-shadow:0 0 0 18px rgba(37,211,102,0)}100%{box-shadow:0 0 0 0 rgba(37,211,102,0)}}
+.mobar{display:none;position:fixed;bottom:0;left:0;right:0;z-index:95;padding:10px;gap:10px;background:rgba(8,8,10,.9);backdrop-filter:blur(14px);border-top:1px solid var(--line)}
+.mobar a{flex:1;justify-content:center;padding:14px}
+
+/* reveal */
+.rv{opacity:0;transform:translateY(34px);transition:opacity .7s cubic-bezier(.2,.8,.2,1),transform .7s cubic-bezier(.2,.8,.2,1)}
+.rv.in{opacity:1;transform:none}
+
+@media(max-width:960px){
+  .hero-grid{grid-template-columns:1fr}.hero-card{display:none}
+  .stats-grid{grid-template-columns:repeat(2,1fr)}
+  .feat-grid{grid-template-columns:repeat(2,1fr)}.feat,.feat:nth-child(1),.feat:nth-child(4){grid-column:span 1}
+  .cat-grid{grid-template-columns:repeat(2,1fr)}
+  .contato-grid{grid-template-columns:1fr}
+}
+@media(max-width:640px){
+  section{padding:80px 0}
+  .nav-links,.nav-tel{display:none}.burger{display:block}
+  .nav-links.open{display:flex;position:absolute;top:100%;left:0;right:0;flex-direction:column;gap:18px;padding:24px;background:rgba(8,8,10,.96);backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+  .stats-grid{grid-template-columns:repeat(2,1fr)}
+  .feat-grid,.cat-grid{grid-template-columns:1fr}
+  .float-zap{bottom:82px}
+  .mobar{display:flex}
+  .troca-in{flex-direction:column;align-items:flex-start;text-align:left}
+}
 </style>
 </head>
 <body>
 
-<!-- ===== HEADER ===== -->
-<header id="header">
-  <div class="container nav">
-    <a href="#inicio" class="logo-badge">
-      <img src="/logo_1.png" class="logo-img" alt="Mercadão das Baterias">
-      <div class="lt">Mercadão<small>DAS BATERIAS</small></div>
+<div class="bg-fx"><div class="orb o1"></div><div class="orb o2"></div><div class="grid"></div></div>
+
+<!-- HEADER -->
+<header id="hd">
+  <div class="wrap nav">
+    <a href="#topo" class="brand">
+      <img src="/logo_1.png" alt="Mercadão das Baterias">
+      <div class="bt">Mercadão<small>DAS BATERIAS</small></div>
     </a>
     <nav class="nav-links" id="menu">
-      <a href="#diferenciais" onclick="closeMenu()">Diferenciais</a>
-      <a href="#produtos" onclick="closeMenu()">Produtos</a>
-      <a href="#estoque" onclick="closeMenu()">Estoque</a>
-      <a href="#contato" onclick="closeMenu()">Contato</a>
+      <a href="#diferenciais" onclick="cm()">Diferenciais</a>
+      <a href="#produtos" onclick="cm()">Produtos</a>
+      <a href="#estoque" onclick="cm()">Estoque</a>
+      <a href="#faq" onclick="cm()">Dúvidas</a>
+      <a href="#contato" onclick="cm()">Contato</a>
     </nav>
     <a href="tel:+5534999434485" class="nav-tel">📞 (34) 99943-4485</a>
     <button class="burger" onclick="document.getElementById('menu').classList.toggle('open')">☰</button>
   </div>
 </header>
 
-<!-- ===== HERO ===== -->
-<section class="hero" id="inicio">
-  <div class="container hero-inner">
-    <span class="badge"><span class="pulse-dot"></span> Plantão 24 horas · Patrocínio-MG</span>
-    <h1>Bateria descarregada?<br><span class="hl">A gente resolve</span> na hora.</h1>
-    <p>Baterias Moura, Cral e ACDelco para carro, moto e caminhão. Entrega e instalação <strong>grátis</strong> e o melhor preço na <strong>base de troca</strong>.</p>
-    <div class="hero-cta">
-      <a href="https://wa.me/5534999434485?text=Ol%C3%A1!%20Preciso%20de%20uma%20bateria." class="btn btn-zap">💬 Chamar no WhatsApp</a>
-      <a href="tel:+5534999434485" class="btn btn-tel">📞 Ligar agora</a>
-    </div>
-    <div class="hero-pay">
-      <span class="lbl">Aceitamos:</span>
-      <img src="/pagamentos.png" alt="Pix, Visa, Mastercard, Elo e American Express" class="pay-strip">
-      <span class="parcelas">Em até 10x sem juros</span>
-    </div>
-  </div>
-  <a href="#diferenciais" class="scroll-ind">⌄</a>
-</section>
-
-<!-- ===== FAIXA ===== -->
-<div class="faixa">
-  <div class="container">
-    <div class="fi"><span class="em">🚚</span> Entrega Grátis</div>
-    <div class="fi"><span class="em">🔧</span> Instalação Grátis</div>
-    <div class="fi"><span class="em">🕐</span> Plantão 24 Horas</div>
-    <div class="fi"><span class="em">🛡️</span> Garantia de Verdade</div>
-    <div class="fi"><span class="em">💳</span> Parcele em até 10x</div>
-  </div>
-</div>
-
-<!-- ===== BASE DE TROCA ===== -->
-<div class="troca">
-  <div class="container troca-in">
-    <div class="troca-ico">🔋</div>
-    <div>
-      <h3>Melhor preço na <span class="hl">base de troca</span></h3>
-      <p>Traga sua bateria velha e pague menos na nova. Consulte o valor agora, sem compromisso.</p>
-    </div>
-    <a href="https://wa.me/5534999434485?text=Ol%C3%A1!%20Quero%20o%20pre%C3%A7o%20da%20bateria%20na%20base%20de%20troca." class="btn btn-zap">💬 Ver preço</a>
-  </div>
-</div>
-
-<!-- ===== DIFERENCIAIS ===== -->
-<section id="diferenciais">
-  <div class="container">
-    <h2 class="reveal">Por que comprar no <span class="hl">Mercadão</span>?</h2>
-    <p class="sub reveal">Especialistas em bateria. Resolvemos seu problema rápido e sem enrolação.</p>
-    <div class="cards">
-      <div class="card reveal"><div class="ico">🚚</div><h3>Entrega e Instalação Grátis</h3><p>Levamos e instalamos a bateria onde você estiver, sem custo nenhum.</p></div>
-      <div class="card reveal"><div class="ico">🕐</div><h3>Plantão 24 Horas</h3><p>Bateria arriou de madrugada? A gente atende a qualquer hora do dia.</p></div>
-      <div class="card reveal"><div class="ico">🛡️</div><h3>Garantia de Verdade</h3><p>Baterias das melhores marcas do mercado, com garantia real.</p></div>
-      <div class="card reveal"><div class="ico">💳</div><h3>Melhor Preço</h3><p>Preço justo e parcelamento em até 10x sem juros no cartão.</p></div>
-    </div>
-  </div>
-</section>
-
-<!-- ===== MARCAS ===== -->
-<div class="marcas">
-  <div class="container">
-    <h3 class="reveal">Trabalhamos com as melhores marcas</h3>
-    <div class="marcas-row">
-      <div class="marca-logo reveal"><img src="/logo-moura.webp" alt="Moura" loading="lazy"></div>
-      <div class="marca-logo dark reveal"><img src="/logo_baterias-zetta_VdqsSb.png" alt="Zetta" loading="lazy"></div>
-      <div class="marca-logo reveal"><img src="/ac-delco-vector-logo-400x400.png" alt="ACDelco" loading="lazy"></div>
-      <div class="marca-logo reveal"><img src="/brand.gif" alt="Cral" loading="lazy"></div>
-    </div>
-  </div>
-</div>
-
-<!-- ===== CATEGORIAS ===== -->
-<section class="categorias" id="produtos">
-  <div class="container">
-    <h2 class="reveal">Bateria pra <span class="hl">todo veículo</span></h2>
-    <p class="sub reveal">Carro, moto, caminhão ou start-stop. Tem pra tudo, novinha e lacrada.</p>
-    <div class="cat-grid">
-      <div class="cat reveal"><div class="thumb"><img src="/cat-carro.jpg" alt="Bateria de carro" loading="lazy"><span class="cat-badge">🚗</span></div><h3>Bateria de Carro</h3><p>Modelos originais, EFB e AGM para todos os carros.</p></div>
-      <div class="cat reveal"><div class="thumb"><img src="/cat-moto.jpg" alt="Bateria de moto" loading="lazy"><span class="cat-badge">🏍️</span></div><h3>Bateria de Moto</h3><p>Para todas as cilindradas, com garantia.</p></div>
-      <div class="cat reveal"><div class="thumb"><img src="/cat-caminhao.jpg" alt="Bateria de caminhão" loading="lazy"><span class="cat-badge">🚚</span></div><h3>Bateria de Caminhão</h3><p>Alta performance para veículos pesados e frotas.</p></div>
-      <div class="cat reveal"><div class="thumb"><img src="/cat-startstop.jpg" alt="Bateria start-stop" loading="lazy"><span class="cat-badge">⚙️</span></div><h3>Start-Stop</h3><p>Baterias EFB e AGM para carros com sistema start-stop.</p></div>
-    </div>
-  </div>
-</section>
-
-<!-- ===== CARROSSEL ===== -->
-<section id="estoque">
-  <div class="container">
-    <h2 class="reveal">Nosso <span class="hl">estoque</span></h2>
-    <p class="sub reveal">Baterias de todas as marcas, prontas pra pronta entrega.</p>
-    <div class="carousel reveal">
-      <div class="slides" id="slides">
-        <div class="slide"><img src="/estoque-1.jpg" alt="Estoque Mercadão das Baterias 1" loading="lazy"></div>
-        <div class="slide"><img src="/estoque-2.jpg" alt="Estoque Mercadão das Baterias 2" loading="lazy"></div>
-        <div class="slide"><img src="/estoque-3.jpg" alt="Estoque Mercadão das Baterias 3" loading="lazy"></div>
-        <div class="slide"><img src="/estoque-4.jpg" alt="Estoque Mercadão das Baterias 4" loading="lazy"></div>
+<!-- HERO -->
+<section class="hero" id="topo">
+  <div class="hero-bg"></div>
+  <div class="wrap hero-grid">
+    <div class="hero-inner">
+      <span class="eyebrow"><span class="dot"></span> Plantão 24 horas · Patrocínio-MG</span>
+      <h1>Bateria arriou?<br><span class="spark">A gente resolve</span> na hora.</h1>
+      <p class="sub">Baterias <b>Moura, Cral e ACDelco</b> para carro, moto e caminhão. Entrega e instalação <b>grátis</b> e o melhor preço na <b>base de troca</b>.</p>
+      <div class="hero-cta">
+        <a href="https://wa.me/5534999434485?text=Ol%C3%A1!%20Preciso%20de%20uma%20bateria." class="btn btn-zap">💬 Chamar no WhatsApp</a>
+        <a href="tel:+5534999434485" class="btn btn-tel">📞 Ligar agora</a>
       </div>
-      <button class="car-btn prev" onclick="move(-1)" aria-label="Anterior">‹</button>
-      <button class="car-btn next" onclick="move(1)" aria-label="Próximo">›</button>
+      <div class="trust">
+        <span class="lbl">Aceitamos</span>
+        <img src="/pagamentos.png" alt="Pix, Visa, Mastercard, Elo, American Express">
+        <span class="parc">em até 10x sem juros</span>
+      </div>
+    </div>
+    <div class="hero-card rv">
+      <img src="/estoque-1.jpg" alt="Estoque Mercadão das Baterias">
+      <div class="tag"><span class="em">⚡</span><div><b>Pronta entrega</b><span>Baterias novas e lacradas, todas as marcas</span></div></div>
+    </div>
+  </div>
+  <a href="#diferenciais" class="scrollcue">⌄</a>
+</section>
+
+<!-- STATS -->
+<section class="stats">
+  <div class="wrap">
+    <div class="stats-grid">
+      <div class="stat rv"><div class="em">🕐</div><div class="num" data-count="24">0</div><div class="cap">Horas por dia</div></div>
+      <div class="stat rv"><div class="em">🚚</div><div class="num" data-count="0" data-text="Grátis">Grátis</div><div class="cap">Entrega & instalação</div></div>
+      <div class="stat rv"><div class="em">🔋</div><div class="num" data-count="4" data-suffix="+">0</div><div class="cap">Marcas top</div></div>
+      <div class="stat rv"><div class="em">💳</div><div class="num" data-count="10" data-suffix="x">0</div><div class="cap">Sem juros</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- DIFERENCIAIS -->
+<section id="diferenciais">
+  <div class="wrap">
+    <div class="shead rv">
+      <span class="eyebrow">Por que o Mercadão</span>
+      <h2 style="margin-top:16px">Resolvemos rápido<br>e <span class="y">sem enrolação</span></h2>
+      <p class="lead">Especialistas em bateria. Do problema à solução, no menor tempo possível — a qualquer hora do dia.</p>
+    </div>
+    <div class="feat-grid">
+      <div class="feat rv"><div class="ico">🚚</div><h3>Entrega e Instalação Grátis</h3><p>Levamos e instalamos a bateria onde você estiver, sem custo nenhum. Você não sai do lugar.</p></div>
+      <div class="feat rv"><div class="ico">🕐</div><h3>Plantão 24 Horas</h3><p>Bateria arriou de madrugada? A gente atende a qualquer hora.</p></div>
+      <div class="feat rv"><div class="ico">🛡️</div><h3>Garantia Real</h3><p>Só marcas líderes do mercado, com garantia de verdade.</p></div>
+      <div class="feat rv"><div class="ico">💳</div><h3>Melhor Preço & Base de Troca</h3><p>Preço justo, parcelamento em até 10x sem juros e o melhor valor trazendo sua bateria velha.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- MARCAS -->
+<div class="marcas">
+  <div class="wrap"><div class="t">Trabalhamos com as melhores marcas do mercado</div></div>
+  <div class="marquee">
+    <div class="marquee-track" id="mtrack">
+      <div class="marca"><img src="/logo-moura.webp" alt="Moura"></div>
+      <div class="marca dark"><img src="/logo_baterias-zetta_VdqsSb.png" alt="Zetta"></div>
+      <div class="marca"><img src="/ac-delco-vector-logo-400x400.png" alt="ACDelco"></div>
+      <div class="marca"><img src="/brand.gif" alt="Cral"></div>
+    </div>
+  </div>
+</div>
+
+<!-- CATEGORIAS -->
+<section id="produtos">
+  <div class="wrap">
+    <div class="shead rv">
+      <span class="eyebrow">Produtos</span>
+      <h2 style="margin-top:16px">Bateria pra <span class="y">todo veículo</span></h2>
+      <p class="lead">Carro, moto, caminhão ou start-stop. Tem pra tudo — novinha e lacrada.</p>
+    </div>
+    <div class="cat-grid">
+      <a href="https://wa.me/5534999434485?text=Ol%C3%A1!%20Quero%20bateria%20de%20carro." class="catc rv"><span class="em">🚗</span><img src="/cat-carro.jpg" alt="Bateria de carro"><div class="body"><h3>Bateria de Carro</h3><p>Originais, EFB e AGM.</p><span class="go">Pedir agora →</span></div></a>
+      <a href="https://wa.me/5534999434485?text=Ol%C3%A1!%20Quero%20bateria%20de%20moto." class="catc rv"><span class="em">🏍️</span><img src="/cat-moto.jpg" alt="Bateria de moto"><div class="body"><h3>Bateria de Moto</h3><p>Todas as cilindradas.</p><span class="go">Pedir agora →</span></div></a>
+      <a href="https://wa.me/5534999434485?text=Ol%C3%A1!%20Quero%20bateria%20de%20caminh%C3%A3o." class="catc rv"><span class="em">🚚</span><img src="/cat-caminhao.jpg" alt="Bateria de caminhão"><div class="body"><h3>Bateria de Caminhão</h3><p>Alta performance p/ frotas.</p><span class="go">Pedir agora →</span></div></a>
+      <a href="https://wa.me/5534999434485?text=Ol%C3%A1!%20Quero%20bateria%20start-stop." class="catc rv"><span class="em">⚙️</span><img src="/cat-startstop.jpg" alt="Bateria start-stop"><div class="body"><h3>Start-Stop</h3><p>EFB e AGM.</p><span class="go">Pedir agora →</span></div></a>
+    </div>
+  </div>
+</section>
+
+<!-- TROCA -->
+<section style="padding-top:0">
+  <div class="wrap">
+    <div class="troca-band rv">
+      <div class="troca-in">
+        <div class="lft">
+          <span class="em">🔋</span>
+          <div><h3>Melhor preço na <span class="y">base de troca</span></h3><p>Traga sua bateria velha e pague menos na nova. Consulte o valor agora, sem compromisso.</p></div>
+        </div>
+        <a href="https://wa.me/5534999434485?text=Ol%C3%A1!%20Quero%20o%20pre%C3%A7o%20da%20bateria%20na%20base%20de%20troca." class="btn btn-zap">💬 Ver meu preço</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ESTOQUE -->
+<section id="estoque">
+  <div class="wrap">
+    <div class="shead rv">
+      <span class="eyebrow">Estoque</span>
+      <h2 style="margin-top:16px">Nosso <span class="y">estoque</span> de verdade</h2>
+      <p class="lead">Baterias de todas as marcas, prontas pra pronta entrega.</p>
+    </div>
+    <div class="carousel rv">
+      <div class="slides" id="slides">
+        <div class="slide"><img src="/estoque-1.jpg" alt="Estoque 1"></div>
+        <div class="slide"><img src="/estoque-2.jpg" alt="Estoque 2"></div>
+        <div class="slide"><img src="/estoque-3.jpg" alt="Estoque 3"></div>
+        <div class="slide"><img src="/estoque-4.jpg" alt="Estoque 4"></div>
+      </div>
+      <button class="cbtn cprev" onclick="mv(-1)" aria-label="Anterior">‹</button>
+      <button class="cbtn cnext" onclick="mv(1)" aria-label="Próximo">›</button>
     </div>
     <div class="dots" id="dots"></div>
   </div>
 </section>
 
-<!-- ===== CTA GRANDE ===== -->
-<section class="cta-grande">
-  <div class="container">
-    <h2 class="reveal">Precisa de bateria <span class="hl">agora</span>?</h2>
-    <p class="reveal">Chama no WhatsApp ou liga direto. Atendimento rápido, plantão 24 horas.</p>
-    <div class="hero-cta reveal">
-      <a href="https://wa.me/5534999434485?text=Ol%C3%A1!%20Preciso%20de%20uma%20bateria." class="btn btn-zap">💬 Chamar no WhatsApp</a>
-      <a href="tel:+5534999434485" class="btn btn-tel">📞 (34) 99943-4485</a>
+<!-- FAQ -->
+<section id="faq">
+  <div class="wrap">
+    <div class="shead rv">
+      <span class="eyebrow">Dúvidas frequentes</span>
+      <h2 style="margin-top:16px">Perguntas <span class="y">rápidas</span></h2>
+    </div>
+    <div class="faq">
+      <div class="qa rv"><q onclick="tg(this)">A entrega e instalação são realmente grátis? <span class="pl">+</span></q><div class="a"><p>Sim. A gente leva e instala a bateria onde você estiver, em Patrocínio e região, sem cobrar taxa nenhuma.</p></div></div>
+      <div class="qa rv"><q onclick="tg(this)">Vocês atendem de madrugada? <span class="pl">+</span></q><div class="a"><p>Atendemos em plantão 24 horas, todos os dias. Bateria não escolhe hora — a gente também não.</p></div></div>
+      <div class="qa rv"><q onclick="tg(this)">Como funciona a base de troca? <span class="pl">+</span></q><div class="a"><p>Você traz a bateria velha e ela abate no valor da nova. Chama no WhatsApp que a gente passa o preço na hora.</p></div></div>
+      <div class="qa rv"><q onclick="tg(this)">Quais as formas de pagamento? <span class="pl">+</span></q><div class="a"><p>Pix, dinheiro e cartões (Visa, Mastercard, Elo, American Express) em até 10x sem juros.</p></div></div>
+      <div class="qa rv"><q onclick="tg(this)">As baterias têm garantia? <span class="pl">+</span></q><div class="a"><p>Sim, todas. Trabalhamos só com marcas líderes (Moura, Cral, ACDelco) com garantia real.</p></div></div>
     </div>
   </div>
 </section>
 
-<!-- ===== CONTATO + MAPA ===== -->
+<!-- CONTATO -->
 <section id="contato">
-  <div class="container">
-    <h2 class="reveal">Onde <span class="hl">estamos</span></h2>
-    <p class="sub reveal">Passa na loja ou chama no WhatsApp. Estamos prontos pra te atender.</p>
+  <div class="wrap">
+    <div class="shead rv">
+      <span class="eyebrow">Contato</span>
+      <h2 style="margin-top:16px">Onde <span class="y">estamos</span></h2>
+    </div>
     <div class="contato-grid">
-      <div class="info-box reveal">
-        <h3>Fale <span class="hl">conosco</span></h3>
-        <div class="info-item"><div class="ico">📍</div><div><strong>Endereço</strong><span>Av. Rui Barbosa, 1501 - São Benedito, Patrocínio - MG</span></div></div>
-        <div class="info-item"><div class="ico">📱</div><div><strong>WhatsApp / Plantão 24h</strong><span>(34) 99943-4485</span></div></div>
-        <div class="info-item"><div class="ico">🕐</div><div><strong>Atendimento</strong><span>Loja: Seg a Sáb · Plantão 24 horas todos os dias</span></div></div>
-        <a href="https://wa.me/5534999434485?text=Ol%C3%A1!%20Preciso%20de%20uma%20bateria." class="btn btn-zap" style="width:100%;justify-content:center;margin-top:12px">💬 Chamar no WhatsApp</a>
+      <div class="info rv">
+        <h3>Fale <span class="y">conosco</span></h3>
+        <div class="iitem"><div class="ic">📍</div><div><b>Endereço</b><span>Av. Rui Barbosa, 1501 - São Benedito, Patrocínio - MG</span></div></div>
+        <div class="iitem"><div class="ic">📱</div><div><b>WhatsApp / Plantão 24h</b><span>(34) 99943-4485</span></div></div>
+        <div class="iitem"><div class="ic">🕐</div><div><b>Atendimento</b><span>Loja: Seg a Sáb · Plantão 24 horas todos os dias</span></div></div>
+        <a href="https://wa.me/5534999434485?text=Ol%C3%A1!%20Preciso%20de%20uma%20bateria." class="btn btn-zap" style="width:100%;justify-content:center;margin-top:8px">💬 Chamar no WhatsApp</a>
       </div>
-      <div class="map-box reveal">
-        <!-- Mapa apontando pro endereço; troco pelo pin exato quando você confirmar -->
+      <div class="mapa rv">
         <iframe src="https://www.google.com/maps?q=Av.+Rui+Barbosa,+1501,+S%C3%A3o+Benedito,+Patroc%C3%ADnio+-+MG&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ===== PAGAMENTO ===== -->
-<div class="pagamento">
-  <div class="container">
-    <h3 class="reveal">Formas de pagamento</h3>
-    <img src="/pagamentos.png" alt="Pix, Visa, Mastercard, Elo e American Express" class="pay-strip-full reveal">
-    <p class="pay-note reveal">Pix · Dinheiro · Cartões em até <strong>10x sem juros</strong></p>
+<!-- PAGAMENTO -->
+<section style="padding-top:0">
+  <div class="wrap pay rv">
+    <span class="eyebrow" style="margin-bottom:22px">Formas de pagamento</span><br><br>
+    <img src="/pagamentos.png" alt="Pix, Visa, Mastercard, Elo, American Express">
+    <p>Pix · Dinheiro · Cartões em até <b>10x sem juros</b></p>
   </div>
-</div>
+</section>
 
-<!-- ===== RODAPÉ ===== -->
-<footer>
-  <div class="container">
-    <a href="#inicio" class="logo-badge">
-      <img src="/logo_1.png" class="logo-img" style="width:52px;height:52px" alt="Mercadão das Baterias">
-      <div class="lt" style="color:#fff">Mercadão<small>DAS BATERIAS</small></div>
-    </a>
-    <div class="fnav">
-      <a href="#diferenciais">Diferenciais</a>
-      <a href="#produtos">Produtos</a>
-      <a href="#estoque">Estoque</a>
-      <a href="#contato">Contato</a>
+<!-- CTA FINAL -->
+<section style="padding-top:0">
+  <div class="wrap">
+    <div class="cta-final rv">
+      <div class="in">
+        <h2>Precisa de bateria <span class="y">agora</span>?</h2>
+        <p>Chama no WhatsApp ou liga direto. Atendimento rápido, plantão 24 horas.</p>
+        <div class="hero-cta">
+          <a href="https://wa.me/5534999434485?text=Ol%C3%A1!%20Preciso%20de%20uma%20bateria." class="btn btn-zap">💬 Chamar no WhatsApp</a>
+          <a href="tel:+5534999434485" class="btn btn-ghost">📞 (34) 99943-4485</a>
+        </div>
+      </div>
     </div>
-    <p>Baterias em Patrocínio-MG · Entrega e instalação grátis · Plantão 24h · (34) 99943-4485</p>
-    <div class="cop"><p>© 2026 Mercadão das Baterias. Todos os direitos reservados.</p></div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="wrap">
+    <a href="#topo" class="brand"><img src="/logo_1.png" alt="Mercadão das Baterias"><div class="bt">Mercadão<small>DAS BATERIAS</small></div></a>
+    <div class="fnav">
+      <a href="#diferenciais">Diferenciais</a><a href="#produtos">Produtos</a><a href="#estoque">Estoque</a><a href="#faq">Dúvidas</a><a href="#contato">Contato</a>
+    </div>
+    <p style="color:var(--muted);font-size:.92rem">Baterias em Patrocínio-MG · Entrega e instalação grátis · Plantão 24h · (34) 99943-4485</p>
+    <div class="cop">© 2026 Mercadão das Baterias. Todos os direitos reservados.</div>
   </div>
 </footer>
 
 <a href="https://wa.me/5534999434485?text=Ol%C3%A1!%20Preciso%20de%20uma%20bateria." class="float-zap" aria-label="WhatsApp">💬</a>
+<div class="mobar">
+  <a href="https://wa.me/5534999434485?text=Ol%C3%A1!%20Preciso%20de%20uma%20bateria." class="btn btn-zap">💬 WhatsApp</a>
+  <a href="tel:+5534999434485" class="btn btn-tel">📞 Ligar</a>
+</div>
 
 <script>
-  // Header scroll
-  const header=document.getElementById('header');
-  window.addEventListener('scroll',()=>header.classList.toggle('scrolled',window.scrollY>60));
-  function closeMenu(){document.getElementById('menu').classList.remove('open')}
+  // header scroll
+  const hd=document.getElementById('hd');
+  addEventListener('scroll',()=>hd.classList.toggle('scrolled',scrollY>50));
+  function cm(){document.getElementById('menu').classList.remove('open')}
 
-  // Carrossel
-  let idx=0;
-  const slides=document.getElementById('slides');
-  const total=slides.children.length;
-  const dotsWrap=document.getElementById('dots');
-  for(let i=0;i<total;i++){
-    const d=document.createElement('div');
-    d.className='dot'+(i===0?' active':'');
-    d.onclick=()=>{idx=i;render()};
-    dotsWrap.appendChild(d);
+  // reveal
+  const io=new IntersectionObserver((es)=>{es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:.12});
+  document.querySelectorAll('.rv').forEach((el,i)=>{el.style.transitionDelay=(i%4*70)+'ms';io.observe(el)});
+
+  // counters
+  const cio=new IntersectionObserver((es)=>{es.forEach(e=>{if(e.isIntersecting){count(e.target);cio.unobserve(e.target)}})},{threshold:.6});
+  document.querySelectorAll('.num').forEach(n=>cio.observe(n));
+  function count(el){
+    if(el.dataset.text){el.textContent=el.dataset.text;return;}
+    const t=+el.dataset.count, suf=el.dataset.suffix||''; let c=0; const step=Math.max(1,Math.round(t/28));
+    const iv=setInterval(()=>{c+=step; if(c>=t){c=t;clearInterval(iv);} el.textContent=c+suf;},28);
   }
-  function render(){
-    slides.style.transform='translateX(-'+(idx*100)+'%)';
-    document.querySelectorAll('.dot').forEach((d,i)=>d.classList.toggle('active',i===idx));
-  }
-  function move(dir){idx=(idx+dir+total)%total;render()}
-  let auto=setInterval(()=>move(1),5000);
+
+  // marquee duplicate
+  const mt=document.getElementById('mtrack'); mt.innerHTML+=mt.innerHTML;
+
+  // carrossel
+  let idx=0; const slides=document.getElementById('slides'); const total=slides.children.length;
+  const dw=document.getElementById('dots');
+  for(let i=0;i<total;i++){const d=document.createElement('div');d.className='dot'+(i===0?' on':'');d.onclick=()=>{idx=i;rndr()};dw.appendChild(d);}
+  function rndr(){slides.style.transform='translateX(-'+(idx*100)+'%)';document.querySelectorAll('.dot').forEach((d,i)=>d.classList.toggle('on',i===idx));}
+  function mv(d){idx=(idx+d+total)%total;rndr()}
+  let auto=setInterval(()=>mv(1),5000);
   slides.addEventListener('mouseenter',()=>clearInterval(auto));
-  slides.addEventListener('mouseleave',()=>auto=setInterval(()=>move(1),5000));
-  // swipe touch
-  let sx=0;
-  slides.addEventListener('touchstart',e=>sx=e.touches[0].clientX);
-  slides.addEventListener('touchend',e=>{const dx=e.changedTouches[0].clientX-sx;if(Math.abs(dx)>40)move(dx<0?1:-1)});
+  slides.addEventListener('mouseleave',()=>auto=setInterval(()=>mv(1),5000));
+  let sx=0; slides.addEventListener('touchstart',e=>sx=e.touches[0].clientX);
+  slides.addEventListener('touchend',e=>{const dx=e.changedTouches[0].clientX-sx;if(Math.abs(dx)>40)mv(dx<0?1:-1)});
 
-  // Reveal on scroll
-  const io=new IntersectionObserver((entries)=>{
-    entries.forEach(en=>{if(en.isIntersecting){en.target.classList.add('show');io.unobserve(en.target)}});
-  },{threshold:.15});
-  document.querySelectorAll('.reveal').forEach((el,i)=>{el.style.transitionDelay=(i%4*80)+'ms';io.observe(el)});
+  // faq
+  function tg(q){const qa=q.parentElement;const a=q.nextElementSibling;const open=qa.classList.contains('open');
+    document.querySelectorAll('.qa').forEach(x=>{x.classList.remove('open');x.querySelector('.a').style.maxHeight=null;});
+    if(!open){qa.classList.add('open');a.style.maxHeight=a.scrollHeight+'px';}}
 
-  // Conversao Google Ads: dispara em clique no WhatsApp e no Ligar
-  function gadsLead(){ if(typeof gtag==='function'){ gtag('event','conversion',{'send_to':'AW-17777432691/L2iqCM_ksf8cEPOw-JxC'}); } }
-  document.querySelectorAll('a[href^="https://wa.me"], a[href^="tel:"]').forEach(function(a){
-    a.addEventListener('click', gadsLead);
-  });
+  // parallax hero
+  const hb=document.querySelector('.hero-bg');
+  addEventListener('scroll',()=>{const y=scrollY;if(y<800)hb.style.transform='translateY('+(y*.15)+'px)';});
+</script>
+<script>
+  (function(){
+    function gadsLead(){ if(typeof gtag==='function'){ gtag('event','conversion',{'send_to':'AW-17777432691/L2iqCM_ksf8cEPOw-JxC'}); } }
+    document.querySelectorAll('a[href^="https://wa.me"], a[href^="tel:"]').forEach(function(a){ a.addEventListener('click', gadsLead); });
+  })();
 </script>
 </body>
 </html>
