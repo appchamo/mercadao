@@ -113,7 +113,7 @@ header.scrolled .brand img{width:44px;height:44px}
 /* stats */
 .stats{padding:0}
 .stats .wrap{margin-top:-40px}
-.stats-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+.stats-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:18px}
 .stat{background:linear-gradient(180deg,var(--surface),var(--bg2));border:1px solid var(--line);border-radius:var(--radius);padding:28px 24px;text-align:center;position:relative;overflow:hidden;transition:.3s}
 .stat::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--amarelo),var(--vermelho));opacity:.7}
 .stat:hover{transform:translateY(-6px);border-color:rgba(246,178,27,.3)}
@@ -238,7 +238,7 @@ footer .cop{color:var(--muted);font-size:.88rem;border-top:1px solid var(--line)
 
 @media(max-width:960px){
   .hero-grid{grid-template-columns:1fr}.hero-card{display:none}
-  .stats-grid{grid-template-columns:repeat(2,1fr)}
+  .stats-grid{grid-template-columns:repeat(3,1fr)}
   .feat-grid{grid-template-columns:repeat(2,1fr)}.feat,.feat:nth-child(1),.feat:nth-child(4){grid-column:span 1}
   .cat-grid{grid-template-columns:repeat(2,1fr)}
   .contato-grid{grid-template-columns:1fr}
@@ -312,6 +312,7 @@ footer .cop{color:var(--muted);font-size:.88rem;border-top:1px solid var(--line)
       <div class="stat rv"><div class="em">🚚</div><div class="num" data-count="0" data-text="Grátis">Grátis</div><div class="cap">Entrega & instalação</div></div>
       <div class="stat rv"><div class="em">🔋</div><div class="num" data-count="4" data-suffix="+">0</div><div class="cap">Marcas top</div></div>
       <div class="stat rv"><div class="em">💳</div><div class="num" data-count="10" data-suffix="x">0</div><div class="cap">Sem juros</div></div>
+      <div class="stat rv"><div class="em">🔍</div><div class="num" data-count="0" data-text="Scanner">Scanner</div><div class="cap">Teste da bateria</div></div>
     </div>
   </div>
 </section>
